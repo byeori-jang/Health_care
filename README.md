@@ -16,23 +16,8 @@
 ## 📂 디렉토리 구조
 
 ```text
-Health_care/
-├─ heart_disease/
-│  ├─ data/            # 원본 및 전처리 데이터
-│  ├─ notebooks/       # 전처리 / EDA 노트북
-│  ├─ outputs/         # 시각화 결과
-│  └─ README.md        # 데이터셋 설명 및 분석 요약
-│
-├─ diabetes/
-│  ├─ data/
-│  ├─ notebooks/
-│  ├─ outputs/
-│  └─ README.md
-│
-├─ stroke/
-│  ├─ data/
-│  ├─ notebooks/
-│  ├─ outputs/
-│  └─ README.md
-│
+dataset_name/
+├─ dataset.csv
+├─ analysis.ipynb
 └─ README.md
+
