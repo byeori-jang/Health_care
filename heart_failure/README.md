@@ -15,7 +15,9 @@ heart-failure-prediction/
 ├── heart_failure.csv              # 심부전 환자 데이터셋
 ├── heart_failure_analysis.ipynb   # 전체 분석 및 모델링 노트북
 └── README.md                      # 프로젝트 설명
+
 📊 Dataset Information
+
 Dataset: Heart Failure Clinical Records Dataset
 
 Samples: 299 patients
@@ -23,6 +25,7 @@ Samples: 299 patients
 Features: 12 input features + 1 target
 
 🎯 Target Variable
+
 DEATH_EVENT
 
 0 : 생존
@@ -41,9 +44,9 @@ serum_sodium	혈청 나트륨
 platelets	혈소판 수
 smoking	흡연 여부 (0/1)
 time	추적 관찰 기간 (일)
-
 🔎 Analysis Workflow (Notebook 기준)
 1️⃣ Environment & Setup
+
 Google Colab 환경 사용
 
 Google Drive 마운트 후 데이터 로드
@@ -51,6 +54,7 @@ Google Drive 마운트 후 데이터 로드
 한글 시각화를 위한 NanumGothic 폰트 설치 및 matplotlib 설정
 
 2️⃣ Exploratory Data Analysis (EDA)
+
 DEATH_EVENT 분포 확인 → 사망/생존 클래스 불균형 존재
 
 연속형 변수:
@@ -64,6 +68,7 @@ DEATH_EVENT 분포 확인 → 사망/생존 클래스 불균형 존재
 변수 간 상관관계 히트맵 시각화
 
 3️⃣ Data Preprocessing
+
 입력 변수(X) / 타깃(y) 분리
 
 Train / Test 데이터 분리 (stratify=y 적용)
@@ -71,6 +76,7 @@ Train / Test 데이터 분리 (stratify=y 적용)
 로지스틱 회귀를 위한 표준화(Standard Scaling)
 
 4️⃣ Modeling
+
 Logistic Regression
 
 해석 가능한 기준 모델
@@ -84,6 +90,7 @@ RandomForest Classifier
 Feature Importance를 통해 중요 변수 도출
 
 5️⃣ Evaluation & Visualization
+
 Accuracy, Precision, Recall, F1-score
 
 Confusion Matrix 시각화 (한글 라벨)
@@ -93,6 +100,7 @@ ROC Curve 및 AUC 비교
 로지스틱 회귀 coef / RandomForest 중요 변수 시각화
 
 📈 Key Insights (실제 분석 결과 기반)
+
 사망 환자에서 다음 변수들이 뚜렷한 차이를 보임:
 
 ejection_fraction 감소
@@ -114,6 +122,7 @@ coef를 통해 사망 위험 증가/감소 방향을 해석할 수 있다는 장
 Accuracy보다 Recall과 F1-score 중심 평가가 중요함
 
 🛠️ Libraries & Environment
+
 Python 3.x
 
 pandas, numpy
@@ -123,4 +132,3 @@ matplotlib, seaborn
 scikit-learn
 
 Google Colab
-
