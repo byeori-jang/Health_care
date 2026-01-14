@@ -1,20 +1,17 @@
-# ❤️ Heart Failure Survival Prediction
+❤️ Heart Failure Survival Prediction
 
-본 프로젝트는 심부전(Heart Failure) 환자의 임상 및 생활습관 데이터를 활용하여  
-**사망 여부(DEATH_EVENT)**를 예측하는 머신러닝 모델을 구축하고,  
-모델 결과를 시각화 및 해석하여 **사망 위험 요인을 분석**하는 것을 목표로 합니다.
+본 프로젝트는 심부전(Heart Failure) 환자의 임상 및 생활습관 데이터를 활용하여
+**사망 여부(DEATH_EVENT)**를 예측하는 머신러닝 모델을 구축하고,
+모델 결과를 시각화 및 해석하여 사망 위험 요인을 분석하는 것을 목표로 합니다.
 
-본 저장소의 분석 내용은 `heart_failure_analysis.ipynb` 노트북에 모두 포함되어 있습니다.
+본 저장소의 분석 내용은 heart_failure_analysis.ipynb 노트북에 모두 포함되어 있습니다.
 
----
+📁 Folder Structure
 
-## 📁 Folder Structure
-
-```bash
 heart-failure-prediction/
-├── heart_failure.csv              # 심부전 환자 데이터셋
-├── heart_failure_analysis.ipynb   # 전체 분석 및 모델링 노트북
-└── README.md                      # 프로젝트 설명
+├── heart_failure.csv
+├── heart_failure_analysis.ipynb
+└── README.md
 
 📊 Dataset Information
 
@@ -57,13 +54,9 @@ Google Drive 마운트 후 데이터 로드
 
 DEATH_EVENT 분포 확인 → 사망/생존 클래스 불균형 존재
 
-연속형 변수:
+연속형 변수: 박스플롯을 통한 사망군 vs 생존군 분포 비교
 
-박스플롯을 통해 사망군 vs 생존군 분포 비교
-
-이진 변수:
-
-박스플롯 대신 countplot을 사용하여 사망 비율 비교
+이진 변수: countplot을 활용한 사망 비율 비교
 
 변수 간 상관관계 히트맵 시각화
 
@@ -71,7 +64,7 @@ DEATH_EVENT 분포 확인 → 사망/생존 클래스 불균형 존재
 
 입력 변수(X) / 타깃(y) 분리
 
-Train / Test 데이터 분리 (stratify=y 적용)
+Train / Test 데이터 분리 (stratify 적용)
 
 로지스틱 회귀를 위한 표준화(Standard Scaling)
 
@@ -81,27 +74,27 @@ Logistic Regression
 
 해석 가능한 기준 모델
 
-coef를 통해 각 변수가 사망 확률에 미치는 영향 분석
+coef를 통한 변수 영향 분석
 
 RandomForest Classifier
 
-비선형 관계를 고려한 성능 중심 모델
+성능 중심 모델
 
-Feature Importance를 통해 중요 변수 도출
+Feature Importance 기반 중요 변수 도출
 
 5️⃣ Evaluation & Visualization
 
 Accuracy, Precision, Recall, F1-score
 
-Confusion Matrix 시각화 (한글 라벨)
+Confusion Matrix 시각화
 
 ROC Curve 및 AUC 비교
 
-로지스틱 회귀 coef / RandomForest 중요 변수 시각화
+주요 변수 시각화 (coef / importance)
 
-📈 Key Insights (실제 분석 결과 기반)
+📈 Key Insights
 
-사망 환자에서 다음 변수들이 뚜렷한 차이를 보임:
+사망 환자에서 다음 변수들이 뚜렷한 차이를 보임
 
 ejection_fraction 감소
 
@@ -111,15 +104,15 @@ age 증가
 
 time 감소 (조기 사망 환자일수록 관찰 기간이 짧음)
 
-RandomForest 모델이 전반적으로 더 높은 예측 성능을 보였으며,
-특히 사망 환자 탐지(Recall) 측면에서 우수한 성능을 보임
+RandomForest 모델이 전반적으로 더 높은 예측 성능을 보였으며
+특히 사망 환자 탐지(Recall) 측면에서 우수함
 
-Logistic Regression은 성능은 다소 낮지만,
-coef를 통해 사망 위험 증가/감소 방향을 해석할 수 있다는 장점이 있음
+Logistic Regression은 성능은 다소 낮지만
+사망 위험 증가/감소 방향을 해석할 수 있다는 장점이 있음
 
 의료 데이터 특성상
-사망 환자를 생존으로 잘못 분류(FN)하는 것이 가장 위험하므로
-Accuracy보다 Recall과 F1-score 중심 평가가 중요함
+사망 환자를 생존으로 잘못 분류하는 것이 가장 위험하므로
+Accuracy보다 Recall 중심 평가가 중요함
 
 🛠️ Libraries & Environment
 
