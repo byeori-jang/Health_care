@@ -7,7 +7,6 @@
 본 저장소의 분석 내용은 heart_failure_analysis.ipynb 노트북에 모두 포함되어 있습니다.
 
 📁 Folder Structure
-
 heart-failure-prediction/
 ├── heart_failure.csv
 ├── heart_failure_analysis.ipynb
@@ -29,7 +28,7 @@ DEATH_EVENT
 
 1 : 사망
 
-🧾 주요 변수
+🧾 Feature Description
 변수명	설명
 age	나이
 anaemia	빈혈 여부 (0/1)
